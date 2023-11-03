@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Robowars</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/robowars_logo.gif" rel="icon">
+  <link href="assets/img/robowars.jpg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <!-- ======= Header ======= -->
+  <div class="navbar">
+    <img src="img/robovitics logo.png" alt="robovitics logo">
+    <li>
+      <ul>Home</ul>
+      <ul onclick="scrollToAboutUs()">About us</ul>
+      <ul onclick="scrollToGravitas()">Gravitas 23'</ul>
+      <ul onclick="scrollToFaq()">FAQ</ul>
+      <ul onclick="scrollTocontactUs()">Contact us</ul>
+    </li>
+    <img id="gravitas_logo" src="img/gravitas_logo-removebg-preview.png" alt="gravitas logo">
+  </div>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex ">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+
+        <div class="col-lg-8">
+          <img src="img/robowars_logo.gif" id="robowars_logo" alt="robowars_logo.gif">
+          <h1>Welcome to <span>Robowars</span></h1>
+          <div class="btns">
+            <a href="https://events.vit.ac.in/" class="btn-menu animated fadeInUp scrollto">Register</a>
+            <a href="index1.html" class="btn-book animated fadeInUp scrollto">Competition</a>
+          </div>
+        </div>
+        <button id="playButton">
+          <i class="fa-solid fa-play"></i>
+        </button>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <div id="videoOverlay" class="video-overlay">
+    <button id="backButton" class="back-button">Back</button>
+    <video id="videoPlayer" controls>
+      <source src="https://res.cloudinary.com/vit2/video/upload/v1663653129/Robowars_2022._Coming_Soon..._bhaufm.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <div class="aboutUs" id="aboutUsSection">
+      <h1 class="aboutUsText">About us</h1>
+      <div class="shortDescription">
+        <div class="checkbox-wrapper-35">
+          <input value="private" name="switch" id="switch" type="checkbox" class="switch">
+          <label for="switch">
+
+            <span class="switch-x-toggletext">
+              <span class="switch-x-unchecked"><span class="switch-x-hiddenlabel">Unchecked: </span>About
+                Robovitics</span>
+              <span class="switch-x-checked"><span class="switch-x-hiddenlabel">Checked: </span>About Robo-Wars</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="mainDescription">
+          <p id="mainDescriptionPara">We, RoboVITics-The official club of VIT, are a collection of vehement tech
+            enthusiasts with the aspiration to learn and hone our skills & the drive to excel. As the official robotics
+            club of VIT Vellore, our motto is to support aspiring robotics enthusiasts in working on jaw-dropping
+            projects and discovering their specialities by holding numerous interactive workshops, seminars, and
+            practical sessions. We work together on some remarkable projects and support exemplary teams that have
+            received numerous accolades.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ======= Gravitas Section ======= -->
+    <section id="gravitas" class="events">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h1 class="aboutgravitasText">About Gravitas 23'</h1>
+        </div>
+
+
+
+
+        <div class="row event-item">
+          <div class="col-lg-6">
+            <a href="https://gravitas.vit.ac.in/" target="_blank">
+
+              <img src="img/gravitas discription.jpg" class="img-fluid1" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <h3>About Gravitas</h3>
+            <p class="fst-italic">
+              VIT's annual techno-management carnival of knowledge, Gravitas, aims to entertain and enrich the
+              technological skills of the students and the researchers by having a plethora of innovative events
+              in every avenue of engineering.
+            </p>
+            <p class="fst-italic">
+              The 14th Edition of graVITas is scheduled from 22nd to 24th September. This year, graVITas will
+              entertain and enrich the technological skills of the students and the researchers by having a
+              plethora of innovative events in every avenue of engineering coupled with MEGATHON.
+            </p>
+            <p class="fst-italic">
+              The theme of this year's extravaganza will be with an objective of inspiring the student community
+              to develop a product for solving real-world problems and challenges.This annual techno-management
+              knowledge carnival of VIT, “graVITas” attracts students from India and Abroad. It provides a
+              platform to display their spectacular talents and innovations.
+            </p>
+          </div>
+        </div>
+
+
+
+        <div class="swiper-pagination"></div>
+
+
+      </div>
+    </section><!-- End Gravitas Section -->
+
+
+    <!-- ======= Timeline Section ======= -->
+    <!-- End Timeline Section -->
+
+    <!-- ======= Media Section ======= -->
+    <section id="media" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+
+        <h1 class="mediaText">Publications and Media</h1>
+
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="img/publication1.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="img/publication1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="img/publication3.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="img/publication3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="img/publication2.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="img/publication2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="img/publication4.jpg" class="gallery-lightbox" data-gall="gallery-item">
+                <img src="img/publication4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+          <div id="lightbox-content" class="lightbox-content">
+            <img id="lightbox-image" src="" alt="" class="img-fluid">
+            <span id="lightbox-close" class="lightbox-close">&times;</span>
+          </div>
+        </div>
+
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= FAQ Section ======= -->
+    <div class="faq" id="faqsection">
+      <h1 class="faqText">FAQs</h1>
+      <div class="cards">
+
+        <div class="card">
+          <p>Q) When and where is Robowars happening?</p>
+          <div class="card__content">
+            <p class="card__title">Answer
+            </p>
+            <p class="card__description"> Robowars will be happening during Gravitas and will befrom 30th
+              sep to 2nd oct at the Outdoor stadium.Stay tuned for the timings!</p>
+          </div>
+        </div>
+        <div class="card">
+          <p>Q) Number of teams participanting</p>
+          <div class="card__content">
+            <p class="card__title">Answer
+            </p>
+            <p class="card__description"> 40+.</p>
+          </div>
+        </div>
+        <div class="card">
+          <p>Q) How can you attend this event?</p>
+          </svg>
+          <div class="card__content">
+            <p class="card__title">Answer
+            </p>
+            <p class="card__description"> Go to Gravitas website and search for robowars and register for
+              the event!</p>
+          </div>
+        </div>
+        <div class="card">
+          <p> Q) How long is the event? </p>
+          </svg>
+          <div class="card__content">
+            <p class="card__title">Answer
+            </p>
+            <p class="card__description"> It happens for 4 hours throughout the day for upto 3 days!</p>
+          </div>
+        </div>
+        <div class="card">
+          <p>
+
+            Q) Who is eligible to participate?
+          </p>
+          <div class="card__content">
+            <p class="card__title">Answer
+            </p>
+            <p class="card__description"> If you’re a part of a team that builds bots and bots follow our
+              regulations. Check out the rulebook above!</p>
+          </div>
+        </div>
+        <div class="card">
+          <p>Q) How long does each match usually last?</p>
+          <div class="card__content">
+            <p class="card__title">Answer
+            </p>
+            <p class="card__description"> 3 minutes each</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- End FAQ Section -->
+
+    <style>
+      /* CSS for the responsive section */
+      .gif-section {
+        text-align: center;
+        padding: 0;
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+
+      .gif {
+        max-width: 100%;
+        /* Set the image to be no wider than its container */
+        height: auto;
+        /* Maintain the image's aspect ratio */
+      }
+    </style>
+
+
+    <section id="Sponsors" class="FAQ">
+      <div class="container" data-aos="fade-up">
+
+        <h2 class="sponsersText"> Sponsors</h2>
+
+        <picture>
+          <img  id="autodesk_img" src="img/autodesk.png" alt="autodesk.png">
+          <img id="electric_img"src="img/electric.png" alt="electric.png">
+        </picture>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <h2 class="contactUsText">Contact Us</h2>
+
+      </div>
+      <div class="container" data-aos="fade-up">
+        <div class="row mt-5 temp">
+
+
+          <!-- ======= Footer ======= -->
+
+          <div class="footer-top">
+            <div class="containerOfFooter">
+              <div class="info">
+                <div class="address">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>VIT VELLORE, Tamil Nadu, 632014</p>
+                </div>
+                <div class="open-hours">
+                  <i class="bi bi-clock"></i>
+                  <h4>Open Hours:</h4>
+                  <p>
+                    Monday-Saturday:<br>
+                    11:00 AM - 05:00 PM
+                  </p>
+                </div>
+                <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>robovitics@vit.ac.in</p>
+                </div>
+                <div class="phone">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>(+91) 84910 92405</p>
+                </div>
+              </div>
+
+
+
+
+
+              <img src="img/war logo.gif" alt="war logo">
+              <div>
+                <div class="card1">
+                  <div class="background">
+                  </div>
+                  <div class="logo">
+                    <img src="img/robovitics black logo.png">
+                  </div>
+
+                  <a href="https://www.instagram.com/robovitics/" target="_blank">
+                    <div class="box box1"><span class="icon"><svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"
+                          class="svg">
+                          <path
+                            d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z">
+                          </path>
+                        </svg></span></div>
+                  </a>
+                  <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A2591255&keywords=robovitics%20-%20the%20official%20robotics%20club%20of%20vit&origin=RICH_QUERY_SUGGESTION&position=0&searchId=33f55617-2386-4f8e-baf1-cca758e151b2&sid=0Ss"
+                    target="_blank">
+
+                    <div class="box box2"> <span class="icon">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                          viewBox="0 0 48 48">
+
+                          <path fill="#FFF"
+                            d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z">
+                          </path>
+                        </svg></span></div>
+                  </a>
+
+                  <a href="https://robovitics.in/" target="_blank">
+
+                    <div class="box box3"><span class="icon">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="1em"
+                          viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                          <path
+                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                        </svg>
+                      </span></div>
+                  </a>
+                  <div class="box box4"></div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+        </footer><!-- End Footer -->
+      </div>
+
+      </div>
+      </div>
+    </section><!-- End Contact Section -->
+  </main><!-- End #main -->
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Robowars</span></strong>. All Rights Reserved
+    </div>
+  </div>
+  <!-- ======= Footer ======= -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

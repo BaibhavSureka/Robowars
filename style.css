@@ -1,0 +1,477 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Body Styles */
+body {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background: rgb(108, 104, 104);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Paragraph Styles */
+.para {
+    padding-top: 20px;
+    color: beige;
+    font-size: small;
+}
+
+/* Tree Styles */
+.tree {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.tree li {
+    display: inline-table;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.tree li:before,
+.tree li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 1px solid #ccc;
+    width: 51%;
+    height: 10px;
+}
+
+.tree li:after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #ccc;
+}
+
+.tree li:only-child:after,
+.tree li:only-child:before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child:before,
+.tree li:last-child:after {
+    border: 0 none;
+}
+
+.tree li:last-child:before {
+    border-right: 1px solid #ccc;
+    border-radius: 0px 5px 0px 0px;
+}
+
+.tree li:first-child:after {
+    border-right: 1px solid #ccc;
+    border-radius: 5px 0px 0px 0px;
+}
+
+.tree ul ul:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+.tree a {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-grid;
+    border-radius: 5px;
+    text-decoration-line: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    transform: scale(1); /* Add initial scaling effect */
+}
+
+.tree a img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px !important;
+    border-radius: 100px;
+    margin: auto;
+}
+
+.tree a span {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Hover Styles */
+.tree li a:hover,
+.tree li a:hover img,
+.tree li a:hover span,
+.tree li a:hover+ul li a {
+    background: #2d3941;
+    color: #000;
+    border: 1px solid #94a0b4;
+    box-shadow: 0px 0px 8px -5px #000000;
+    transform: scale(1.1); /* Add zoom-in effect on hover */
+    transition: transform 0.5s; /* Add a smooth transition */
+}
+
+/* Button Styles */
+html, body {
+    height: 50%;
+}
+
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    min-width: 30px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: fixed; /* Fixed position for the button */
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    z-index: 999; /* Ensure it's above other content */
+    padding: 10px;
+}
+
+.button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+    opacity: 1;
+}
+
+button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+}
+
+/* Floating Button Styles */
+.floating-button {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to set the distance from the bottom */
+    right: 20px; /* Adjust this value to set the distance from the right */
+    background-color: #4FD1C5;
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.floating-button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.floating-button:hover,
+.floating-button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+.floating-button:hover::before,
+.floating-button:focus::before {
+    opacity: 1;
+}
+
+.floating-button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.floating-button:hover::after,
+.floating-button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    width: 30%;
+    height: 90%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    overflow-y: scroll;
+    overflow-x:hidden ;
+    background-size: cover;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.teams-button {
+    background-color: #ffd100;
+    color: #313133;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    overflow: hidden;
+    font-weight: bold;
+    position: absolute;
+    cursor: pointer;
+    width: 85px;
+    border-radius: 23px;
+    right: 17px;
+}
+
+.teams-button:hover {
+    background-color: #3caaa6;
+}
+
+.lightbox ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lightbox ul li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    justify-content: space-around;
+}
+
+.lightbox ul li img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.lightbox ul li span {
+    font-size: 16px;
+    color: #333;
+    width: 100px;
+}
+
+
+.teams_cat{
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+}
+
+.teams_cat button{
+    background-color: #a2ffeb;
+    border: none;
+    padding: 15px;
+    border-radius: 11px;
+    width: 100px;
+}
+
+.teams_cat button:hover{
+    cursor: pointer;
+}
+
+#kg15{
+    border: 2px black solid;
+}
+
+#list15kg{
+
+    position: absolute;
+    top: 108px;
+    left: 10px;
+    width: 100%;
+
+}
+
+#list30kg{
+    display: none;
+}
+
+
+.buttons_tree{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.buttons_tree button{
+    text-align: center;
+    
+    z-index: 2;
+    border-radius: 20px;
+    border: none;
+    height: 46px;
+    width: 145px;
+    background-color: #a2ffeb;
+}
+
+.buttons_tree button:hover{
+    cursor: pointer;
+}
+#tree15kg{
+    border: 2px solid black;
+}
+
+#tree15{
+    position: absolute;
+    display: contents;
+}
+
+#tree60{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .lightbox-content{
+        width: 80%;
+    }
+
+    .lightbox ul li span {
+        font-size: 15px;
+        color: #333;
+        font-size: 10px;
+    }
+
+    .teams_cat{
+        margin: 0;
+    }
+
+    .teams_cat button{
+        
+        padding: 9px;
+        width: 82px;
+    }
+}
+
+
